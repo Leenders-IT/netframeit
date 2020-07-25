@@ -1,0 +1,15 @@
+.single-menu-panle {
+    position: relative;
+    .menu-highlight-badge {
+        display: block;
+        position: absolute;
+        @include equal-size-lineHeight(50px);
+        border-radius: 50%;
+        background-color: $color-secondary;
+        color: $color-white;
+        font-size: rem(13px);
+        text-align: center;
+        top: 5px;
+        right: 5px;
+    }
+}

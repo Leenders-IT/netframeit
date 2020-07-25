@@ -1,0 +1,16 @@
+.shuufle-letter-title {
+    font-size: rem(102px);
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-family: $bodyFont;
+    line-height: 1;
+    color: #f8fafe;
+}
+
+.pricing-section {
+    .shuffle-letter-title-wraper {
+        + .container {
+            margin-top: -17px;
+        }
+    }
+}

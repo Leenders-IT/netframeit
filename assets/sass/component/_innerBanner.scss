@@ -1,0 +1,120 @@
+.xs-banner {
+    &.inner-banner {
+        min-height: 550px;
+    }
+    &.service-banner {
+        min-height: 700px;
+    }
+    &.service-banner-2 {
+        min-height: 824px;
+    }
+    &.service-banner,
+    &.service-banner-2 {
+        .xs-banner-content {
+            p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &.inner-banner {
+        @include background-content();
+        .banner-title {
+            font-size: rem(52px);
+        }
+        .banner-sub-title {
+            font-size: rem(20px);
+        }
+        .xs-banner-content {
+            position: relative;
+            z-index: 2;
+        }
+        .xs-overlay {
+            opacity: .85;
+            &.bg-gradient {
+                background: rgb(21, 9, 94);
+                background: linear-gradient(135deg, rgba(21, 9, 94, 1) 0%, rgba(21, 9, 94, 1) 32%, rgba(16, 69, 219, 1) 100%);
+            }
+        }
+    }
+}
+
+.inner-welcome-image-group {
+    text-align: right;
+    .banner-ico {
+        &.banner-ico-1 {
+            left: 52.5%;
+            top: 1%;
+        }
+        &.banner-ico-2 {
+            right: 10%;
+            top: 10%;
+            animation-delay: 1s;
+        }
+    }
+    &.pricing-icon {
+        .banner-ico {
+            &.banner-ico-1 {
+                left: 51.5%;
+            }
+            &.banner-ico-2 {
+                right: 11%;
+            }
+        }
+    }
+    &.affiliate-icon {
+        .banner-ico {
+            &.banner-ico-1 {
+                left: 43.5%;
+            }
+            &.banner-ico-2 {
+                right: 12%;
+            }
+        }
+    }
+    &.faq-icon {
+        .banner-ico {
+            &.banner-ico-1 {
+                left: 42.5%;
+            }
+            &.banner-ico-2 {
+                right: 12.5%;
+            }
+        }
+    }
+    &.cart-icon {
+        .banner-ico {
+            &.banner-ico-1 {
+                left: 53.9%;
+            }
+            &.banner-ico-2 {
+                right: 11%;
+            }
+        }
+    }
+    &.whois-icon,
+    &.signin-icon {
+        .banner-ico {
+            &.banner-ico-1 {
+                left: 53.5%;
+            }
+            &.banner-ico-2 {
+                right: 11.5%;
+            }
+        }
+    }
+}
+
+.service-banner {
+    @include background-content();
+    .xs-banner-content {
+        position: relative;
+        z-index: 2;
+    }
+    .xs-overlay {
+        opacity: .85;
+        &.bg-gradient {
+            background: rgb(21, 9, 94);
+            background: linear-gradient(135deg, rgba(21, 9, 94, 1) 0%, rgba(21, 9, 94, 1) 32%, rgba(16, 69, 219, 1) 100%);
+        }
+    }   
+}

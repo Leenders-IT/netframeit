@@ -1,0 +1,80 @@
+$padding: 100px;
+.call-to-action-section {
+    background: linear-gradient(45deg, rgba(16, 69, 219, 1) 0%, rgba(16, 69, 219, 1) 13%, rgba(21, 9, 94, 1) 52%, rgba(21, 9, 94, 1) 100%);
+    position: relative;
+    padding-top: $padding;
+    padding-bottom: $padding * 2;
+    text-align: center;
+    z-index: 1;
+    .icon-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/icon-bg.png);
+        @include background-content($size: contain);
+        z-index: -1;
+    }
+    &.call-to-action-v2 {
+        background: rgb(10, 159, 254);
+        background: linear-gradient(87deg, rgba(10, 159, 254, 1) 0%, rgba(10, 159, 254, 1) 35%, rgba(17, 36, 217, 1) 70%, rgba(17, 36, 217, 1) 100%);
+        padding: 100px 0;
+        .call-to-action-content {
+            h2 {
+                margin-bottom: 60px;
+            }
+            .xs-btn-wraper {
+                .btn-secondary {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    &.call-to-action-v3 {
+        @include gradient-ten();
+    }
+    &.call-to-action-v4 {
+        @include background-content();
+        background-attachment: fixed;
+        padding: 100px 0;
+        z-index: 1;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgb(21, 7, 115);
+            background: linear-gradient(110deg, rgba(21, 7, 115, 1) 0%, rgba(83, 51, 237, 1) 54%, rgba(44, 212, 217, 1) 100%);
+            opacity: .8;
+            z-index: -1;
+        }
+        .icon-bg {
+            background-size: auto;
+            background-position: bottom left;
+        }
+        .call-to-action-content {
+            h2 {
+                margin-bottom: 40px;
+                font-weight: 500;
+            }
+        }
+        &.style-2 {
+            &::before {
+                background: $color-black;
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.call-to-action-content {
+    h2 {
+        color: $color-white;
+        margin-bottom: 0px;
+        font-size: rem(36px);
+        font-weight: 700;
+    }
+}

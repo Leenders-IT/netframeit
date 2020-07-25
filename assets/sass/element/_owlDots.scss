@@ -1,0 +1,23 @@
+.owl-dots {
+    text-align: center;
+    margin-top: 15px;
+    .owl-dot {
+        background-color: transparent;
+        border: 0px;
+        >span {
+            display: block;
+            @include equal-size(8px);
+            border-radius: 50%;
+            background-color: $color-ternary;
+            opacity: .15;
+            @include transition;
+        }
+        outline: none;
+        &.active {
+            >span {
+                opacity: .60;
+                transform: scale(2);
+            }
+        }
+    }
+}

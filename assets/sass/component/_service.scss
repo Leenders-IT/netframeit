@@ -1,0 +1,66 @@
+.xs-service-block {
+    text-align: center;
+    padding: 0 30px;
+    background-color: $color-white;
+    margin-bottom: 30px;
+    .service-img {
+        min-height: 96px;
+        margin-bottom: 20px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.style-boxed {
+    .xs-service-block {
+        padding: 30px;
+        @include transition;
+        position: relative;
+        &:hover,
+        &.active {
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 10px 15px 0px rgba(23, 104, 221, 0.1);
+            z-index: 1;
+        }
+        .service-img {
+            line-height: 1;
+            min-height: 0;
+            margin-bottom: 20px;
+            font-size: rem(55px);
+            color: $color-primary;
+        }
+    }
+    &.version-2 {
+        .xs-service-block {
+            &:hover,
+            &.active {
+                box-shadow: 0px 19.799px 60px 0px rgba(0, 0, 0, 0.1);
+            }
+            .service-img {
+                color: $color-ternary;
+                margin-bottom: 30px;
+            }
+            .xs-title {
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            .simple-btn {
+                color: $color-ternary;
+            }
+        }
+    }
+}
+
+.xs-service-area {
+    background: rgb(247, 249, 251);
+    background: linear-gradient(180deg, rgba(247, 249, 251, 1) 0%, rgba(233, 231, 240, 0) 100%);
+    .xs-service-block {
+        &:hover,
+        &.active {
+            box-shadow: 19.799px 19.799px 40px 0px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

@@ -1,0 +1,214 @@
+.footer-group {
+    background-color: #113072;
+    @include background-content($size: contain);
+}
+.footer-main {
+    padding-top: 115px;
+    padding-bottom: 60px;
+}
+
+.footer-widget {
+    .widget-title {
+        color: $color-white;
+        font-size: rem(24px);
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 30px;
+            background-color: $color-primary;
+        }
+    }
+    .xs-list {
+        li {
+            margin-bottom: 14px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            a {
+                @include transition;
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+.footer-widget .xs-list li a,
+.contact-info-widget li span,
+.footer-bottom-info p {
+    // color: $color-white;
+    // opacity: .5;
+    color: #d7d7d7;
+}
+
+.contact-info-widget{
+    li {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        img {
+            margin-right: 18px;
+        }
+    }
+}
+
+.footer-bottom-info {
+    p {
+        margin-bottom: 0px;
+        a {
+            color: #1ba3ff;
+            text-decoration: underline;
+            @include transition;
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba($color: $color-white, $alpha: .1);
+    padding: 50px 0;
+    .xs-list {
+        padding-top: 10px;
+        text-align: right;
+        li {
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.footer-copyright {
+    background-color: #0d2352;
+    padding: 38px 0;
+    min-height: 120px;
+}
+.copyright-text {
+    padding: 10px 0;
+    p {
+        margin-bottom: 0px;
+        color: #e7e7e7;
+        font-size: rem(15px);
+        a {
+            color: $color-primary;
+        }
+    }
+}
+
+.footer-logo-wraper {
+    text-align: center;
+    .footer-logo {
+        display: inline-block;
+    }
+}
+
+.social-list-wraper {
+    text-align: right;
+}
+
+.xs-footer-section {
+    > .xs-feature-section {
+        margin-bottom: -101px;
+        + .footer-group {
+            .footer-main {
+                padding-top: 195px;
+            }
+        }
+    }
+    &.footer-v2 { // footer version 2
+        background-color: #0e064a;
+        padding-top: 115px;
+        .footer-bottom {
+            padding: 0px;
+            border-top: 0px solid #000;
+            .footer-bottom-info {
+                p {
+                    color: rgba($color: $color-white, $alpha: .7);
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+            .xs-list {
+                li {
+                    > img {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+        .footer-group {
+            background-color: inherit;
+            background-size: auto;
+            background-position: bottom center;
+        }
+        .footer-main {
+            padding-bottom: 110px;
+            padding-top: 100px;
+        }
+        .footer-widget {
+            &.text-widget {
+                .footer-logo {
+                    display: inline-block;
+                    margin-bottom: 23px;
+                }
+                > p {
+                    margin-bottom: 25px;
+                    color: rgba($color: $color-white, $alpha: .5);
+                    > a {
+                        @include transition;
+                        color: inherit;
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            .widget-title {
+                padding-bottom: 0;
+                margin-bottom: 20px;
+                &::before {
+                    display: none;
+                }
+            }
+            .xs-list {
+                > li {
+                    &:not(:last-child) {
+                        margin-bottom: 3px;
+                    }
+                    > a {
+                        color: rgba($color: $color-white, $alpha: .5);
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            .contact-info-widget {
+                > li {
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                    > a {
+                        color: rgba($color: $color-white, $alpha: .5);
+                        @include transition;
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
